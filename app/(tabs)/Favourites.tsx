@@ -3,10 +3,10 @@ import { StyleSheet } from 'react-native';
 import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
 
-export default function TabThreeScreen() {
+export default function CategoryScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Lubomir Postman</Text>
+      <Text style={styles.title}>FAVOURITES</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
     </View>
   );

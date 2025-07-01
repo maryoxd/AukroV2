@@ -27,40 +27,54 @@ export default function TabLayout() {
         headerShown: useClientOnlyValue(false, true),
       }}>
       <Tabs.Screen
-        name="index"
+        name="Home"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
+          title: 'Domů',
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="Category"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Kategorie',
+          tabBarIcon: ({ color }) => <TabBarIcon name="search" color={color} />,
         }}
       />
         <Tabs.Screen
-            name="three"
+            name="Add"
             options={{
-                title: 'Tab Three Luboš poustmen',
-                tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+                title: 'Přidat',
+                tabBarIcon: ({ color }) => <TabBarIcon name="plus-circle" color={color} />,
+            }}
+        />
+
+        <Tabs.Screen
+            name="Favourites"
+            options={{
+                title: 'Oblíbené',
+                tabBarIcon: ({ color }) => <TabBarIcon name="heart" color={color} />,
+            }}
+        />
+
+        <Tabs.Screen
+            name="MyAukro"
+            options={{
+                title: 'Moje Aukro',
+                tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+            }}
+        />
+        <Tabs.Screen
+            name="Lubo"
+            options={{
+                title: 'Lubo pískoviště',
+                tabBarIcon: ({ color }) => <TabBarIcon name="id-card" color={color} />,
             }}
         />
     </Tabs>
+
+
+
   );
 }
+
+
